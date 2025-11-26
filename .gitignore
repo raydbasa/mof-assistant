@@ -21,6 +21,9 @@ ENV/
 # Environment Variables
 .env
 
+# Streamlit Secrets (for Streamlit Cloud)
+.streamlit/secrets.toml
+
 # Data files (keep structure but ignore large files)
 data/raw/*
 !data/raw/.gitkeep

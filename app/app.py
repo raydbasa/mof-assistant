@@ -18,7 +18,8 @@ from prompts import SYSTEM_PROMPT, format_extraction_prompt, format_suggestion_p
 from utils import (
     parse_json_response, display_mof_row,
     download_csv, download_json, extract_numerical_value,
-    validate_environment, sanitize_input
+    validate_environment, sanitize_input, get_secret,
+    validate_text_input, check_rate_limit
 )
 
 # Constants
@@ -351,11 +352,15 @@ def quick_complete_tab() -> None:
     st.markdown("---")
     disabled = (metal.strip() == "" and linker.strip() == "")
     if st.button("🚀 Generate Complete Protocol", type="primary", disabled=disabled):
+        # Check rate limit
+        if not check_rate_limit("complete", max_requests=10, window_seconds=60):
+            return
+        
         if not validate_environment():
             return
         try:
             from openai import OpenAI
-            client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+            client = OpenAI(api_key=get_secret("OPENAI_API_KEY"))
         except Exception as e:
             st.error(f"Failed to initialize OpenAI client: {e}")
             return
@@ -413,13 +418,21 @@ def extract_tab() -> None:
 
     st.markdown("---")
     if st.button("🔍 Extract Row", type="primary") and text_input.strip():
+        # Validate input
+        if not validate_text_input(text_input, max_length=5000, field_name="Synthesis text"):
+            return
+        
+        # Check rate limit
+        if not check_rate_limit("extract", max_requests=10, window_seconds=60):
+            return
+        
         if not validate_environment():
             return
 
         # OpenAI client
         try:
             from openai import OpenAI
-            client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+            client = OpenAI(api_key=get_secret("OPENAI_API_KEY"))
         except Exception as e:
             st.error(f"Failed to initialize OpenAI client: {e}")
             return
@@ -561,12 +574,20 @@ def suggest_tab() -> None:
 
     st.markdown("---")
     if st.button("✨ Generate Protocol", type="primary") and cues_input.strip():
+        # Validate input
+        if not validate_text_input(cues_input, max_length=2000, field_name="Synthesis cues"):
+            return
+        
+        # Check rate limit
+        if not check_rate_limit("suggest", max_requests=10, window_seconds=60):
+            return
+        
         if not validate_environment():
             return
 
         try:
             from openai import OpenAI
-            client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+            client = OpenAI(api_key=get_secret("OPENAI_API_KEY"))
         except Exception as e:
             st.error(f"Failed to initialize OpenAI client: {e}")
             return

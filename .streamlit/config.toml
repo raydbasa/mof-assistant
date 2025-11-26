@@ -1,0 +1,21 @@
+# Streamlit Configuration
+# This file contains non-sensitive configuration for your Streamlit app
+
+[theme]
+# Streamlit theme configuration (optional)
+primaryColor = "#22c55e"
+backgroundColor = "#020617"
+secondaryBackgroundColor = "#0f172a"
+textColor = "#e5e7eb"
+font = "sans serif"
+
+[server]
+# Server configuration
+headless = true
+enableXsrfProtection = true
+maxUploadSize = 10
+# Note: enableCORS is automatically set to true when enableXsrfProtection is true
+
+[browser]
+# Browser configuration
+gatherUsageStats = false
