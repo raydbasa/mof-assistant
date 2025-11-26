@@ -1,0 +1,11 @@
+Target,Metal source (mmol),Linker(s) (mmol),Solvent(s) (mL),Modulator / Additive,Temp (°C),Time (h),Pressure,Method,Wash / Activation
+MOF-5,Zn(NO3)2·6H2O (0.5),H2BDC (0.5),DMF (10),H2O (0.5),120,24,solvothermal,solvothermal,"DMF, methanol, chloroform"
+HKUST-1,Cu(NO3)2·3H2O (0.3),H3BTC (0.2),DMF:H2O (8:2),,85,12,ambient,room temperature,"DMF, ethanol"
+UiO-66,ZrCl4 (0.1),H2BDC (0.1),DMF (5),HCl (0.1),120,48,solvothermal,solvothermal,"DMF, methanol, acetone"
+MIL-101,Cr(NO3)3·9H2O (0.2),H2BDC (0.2),H2O (10),HF (0.1),220,8,solvothermal,hydrothermal,"H2O, ethanol"
+ZIF-8,Zn(NO3)2·6H2O (0.5),2-methylimidazole (2.0),methanol (20),,25,2,ambient,room temperature,methanol
+MOF-74,Mg(NO3)2·6H2O (0.3),H4DOBDC (0.1),DMF:H2O:EtOH (6:2:2),TEA (0.1),100,36,solvothermal,solvothermal,"DMF, methanol"
+NU-1000,ZrCl4 (0.05),H4TBAPy (0.05),DMF (3),benzoic acid (0.1),120,72,solvothermal,solvothermal,"DMF, methanol, acetone"
+PCN-250,FeCl3·6H2O (0.2),H3BTC (0.1),DMF:H2O (8:2),HCl (0.05),100,24,solvothermal,solvothermal,"DMF, methanol"
+MOF-177,Zn(NO3)2·6H2O (0.1),H3BTB (0.05),DMF (5),H2O (0.1),85,48,solvothermal,solvothermal,"DMF, chloroform"
+MIL-53,Al(NO3)3·9H2O (0.2),H2BDC (0.2),H2O (10),,150,12,solvothermal,hydrothermal,"H2O, ethanol"
