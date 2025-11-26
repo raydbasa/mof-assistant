@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Quick setup script to create sample data and train basic models.
+Quick setup script to create sample data and train basic models..
 """
 
 import pandas as pd

@@ -1,4 +1,4 @@
-# MOF Synthesis Assistant
+# MOF Synthesis Assistant 
 
 A minimal-viable product (MVP) for extracting, predicting, and suggesting Metal-Organic Framework (MOF) synthesis protocols using AI and machine learning.
 
@@ -8,7 +8,7 @@ A minimal-viable product (MVP) for extracting, predicting, and suggesting Metal-
 - 🔍 **Extract**: Extract structured synthesis data from free text using OpenAI's Structured Outputs
 - 🔮 **Predict**: Predict missing synthesis parameters using XGBoost ML models
 - 💡 **Suggest**: Generate complete synthesis protocols from partial cues
-- 📊 **Export**: Download results as CSV or JSON
+- 📊 **Export**: Download results as CSV or JSON 
 
 ## Project Structure
 
@@ -24,7 +24,7 @@ mof-assistant/
 │   ├── interim/            # Intermediate data (placeholder)
 │   └── processed/
 │       └── mof_runs.csv    # Sample MOF synthesis dataset
-├── models/                 # Trained ML models (joblib files)
+├── models/                 # Trained ML models (joblib files) 
 ├── notebooks/
 │   ├── 01_unify_data.ipynb # Data preparation notebook
 │   ├── 02_train_tabular.ipynb # Model training notebook
